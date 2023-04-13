@@ -17,7 +17,7 @@
             <img class="mark" src="resources/img/logo.png" />
             <div class="logo">Seattle Library</div>
         </div>
-        <div class="right">
+        <div class="right">s
             <ul>
                 <li><a href="<%=request.getContextPath()%>/home" class="menu">Home</a></li>
                 <li><a href="<%=request.getContextPath()%>/">ログアウト</a></li>
@@ -46,8 +46,8 @@
                             <ul>
                                 <li class="book_title">${bookInfo.title}</li>
                                 <li class="book_author">${bookInfo.author}(著)</li>
-                                <li class="book_publisher">出版社${bookInfo.publisher}</li>
-                                <li class="book_publish_date">出版日${bookInfo.publish_date}</li>
+                                <li class="book_publisher">出版社:${bookInfo.publisher}</li>
+                                <li class="book_publish_date">出版日:${bookInfo.publishDate}</li>
                             </ul>
                         </div>
                     </c:forEach>
