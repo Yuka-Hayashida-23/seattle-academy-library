@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import jp.co.seattle.library.service.BooksService;
 
-/**
+/**s
  * 書籍情報を更新する
  * 
  * @param locale      ロケール情報

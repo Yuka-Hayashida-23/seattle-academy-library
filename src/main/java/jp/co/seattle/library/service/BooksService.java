@@ -81,7 +81,7 @@ public class BooksService {
 		jdbcTemplate.update(sql, bookId);
 	}
 
-	/**f
+	/**
 	 * 書籍情報を更新する
 	 * 
 	 * @param bookInfo
