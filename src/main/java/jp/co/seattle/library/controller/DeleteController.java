@@ -27,7 +27,7 @@ public class DeleteController {
 	@Autowired
 	private BooksService booksService;
 
-	@RequestMapping(value = "/deletetBook", method = RequestMethod.GET)
+	@RequestMapping(value = "/deletetBook", method = RequestMethod.POST)
 	public String transitionEdit(Locale locale, int bookId, Model model) {
 		logger.info("Welcome deleteBooks.java! The client locale is {}.", locale);
 
