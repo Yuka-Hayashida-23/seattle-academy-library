@@ -30,13 +30,12 @@ public class DeleteController {
 	@RequestMapping(value = "/deletetBook", method = RequestMethod.GET)
 	public String transitionEdit(Locale locale, int bookId, Model model) {
 		logger.info("Welcome deleteBooks.java! The client locale is {}.", locale);
-	
-		
-			// 書籍情報を削除する
-			booksService.deleteBook(bookId);
 
-	// 一覧画面に遷移する
-	return"redirect:/home";
-}
+		// 書籍情報を削除する
+		booksService.deleteBook(bookId);
+
+		// 一覧画面に遷移する
+		return "redirect:/home";
+	}
 
 }

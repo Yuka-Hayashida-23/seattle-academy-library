@@ -35,8 +35,7 @@ public class BooksService {
 		List<BookInfo> getedBookList = jdbcTemplate.query(
 				"SELECT id,title,author,publisher,publish_date,thumbnail_url FROM books ORDER BY title ASC",
 				new BookInfoRowMapper());
-//		
-		
+		//		
 
 		return getedBookList;
 	}
@@ -82,7 +81,7 @@ public class BooksService {
 		jdbcTemplate.update(sql, bookId);
 	}
 
-	/**
+	/**f
 	 * 書籍情報を更新する
 	 * 
 	 * @param bookInfo
