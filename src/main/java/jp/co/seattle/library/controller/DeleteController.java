@@ -19,7 +19,6 @@ import jp.co.seattle.library.service.BooksService;
  * @param model       モデル
  * @return 遷移先画面
 	 */
-
 @Controller
 public class DeleteController {
 	final static Logger logger = LoggerFactory.getLogger(DeleteController.class);
