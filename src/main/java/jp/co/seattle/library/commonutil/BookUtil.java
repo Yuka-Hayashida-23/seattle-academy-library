@@ -3,6 +3,7 @@ package jp.co.seattle.library.commonutil;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -57,21 +58,20 @@ public class BookUtil {
 			DateFormat formatter = new SimpleDateFormat("yyyyMMdd");
 			formatter.setLenient(false); // ←これで厳密にチェックしてくれるようになる
 			//TODO　取得した日付の形式が正しければtrue（タスク４）
-			if (publishDate.length() > 0) {
-			    if (publishDate.length() == 8) {
-			     return true;
-			    } else {
-			     return false;
-			    }
-			   } else {
-			    return true;
-			   }
+
+			Date publishdate = formatter.parse(publishDate);
+			String publishString = formatter.format(publishdate);
+
+			if (publishDate.equals(publishString)) {
+				return true;
+			} else {
+				return true;
+			}
 		} catch (Exception p) {
 			p.printStackTrace();
 			return false;
 		}
 	}
-
 	/**
 	 * ISBNの形式チェック
 	 * 
@@ -80,7 +80,7 @@ public class BookUtil {
 	 */
 	private static boolean isValidIsbn(String isbn) {
 		//TODO　ISBNが半角数字で10文字か13文字であればtrue（タスク４）
-		if (isbn.length() > 0) {
+		if (!isbn.isEmpty()) {
 			if ((isbn.length() == 10 || isbn.length() == 13) && isbn.matches("^[0-9]+$")) {
 				return true;
 			} else {
@@ -90,7 +90,6 @@ public class BookUtil {
 			return true;
 		}
 	}
-
 	/**
 	 * 必須項目の存在チェック
 	 * 
