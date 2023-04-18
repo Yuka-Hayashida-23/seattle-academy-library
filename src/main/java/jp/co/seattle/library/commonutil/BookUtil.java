@@ -65,7 +65,7 @@ public class BookUtil {
 			if (publishDate.equals(publishString)) {
 				return true;
 			} else {
-				return true;
+				return false;
 			}
 		} catch (Exception p) {
 			p.printStackTrace();
